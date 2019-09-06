@@ -1,5 +1,20 @@
 Vault Java Driver
 =================
+
+<table>
+<tr>
+<th>WARNING!</th>
+</tr>
+<tr>
+<th>
+This is a temporary fork of the <a href="https://github.com/BetterCloud/vault-java-driver">Better Cloud project</a> pending either a merge of https://github.com/BetterCloud/vault-java-driver/pull/191 or an alternative solution to the proxy problem.
+</th>
+</tr>
+<tr>
+<td>This project will not be maintained once upstream has the required functionality to allow you to control the proxy used to access Vault without having to configure JVM global proxies</td>
+</tr>
+</table>
+
 A zero-dependency Java client for the [Vault](https://www.vaultproject.io/) secrets management solution from
 HashiCorp. 
 
@@ -7,9 +22,6 @@ This driver strives to implement Vault's full HTTP API, along with supporting fu
 retry handling.  It does so without relying on any other external libraries beyond the Java standard library,
 and is compatible with Java 8 and up.  So it will play nice with all of your projects, greenfield and legacy
 alike, without causing conflicts with any other dependency.
-
-NOTE:  Although the binary artifact produced by the project is backwards-compatible with Java 8, you do need 
-       JDK 9 or higher to modify or build the source code of this library itself.
 
 Table of Contents
 -----------------
@@ -34,16 +46,16 @@ The driver is available from Maven Central, for all modern Java build systems.
 Gradle:
 ```
 dependencies {
-    implementation 'com.bettercloud:vault-java-driver:5.0.0'
+    implementation 'io.github.stephenc.vault-java-driver:vault-java-driver:4.2.0'
 }
 ```
 
 Maven:
 ```
 <dependency>
-    <groupId>com.bettercloud</groupId>
+    <groupId>io.github.stephenc.vault-java-driver</groupId>
     <artifactId>vault-java-driver</artifactId>
-    <version>5.0.0</version>
+    <version>4.2.0</version>
 </dependency>
 ```
 
@@ -252,7 +264,8 @@ Note that changes to the major version (i.e. the first number) represent possibl
 may require modifications in your code to migrate.  Changes to the minor version (i.e. the second number)
 should represent non-breaking changes.  The third number represents any very minor bugfix patches.
 
-* **5.0.0 (IN PROGRESS)**:  This release contains the following updates:
+* **4.2.0**:  This release contains the following updates:
+  * Adds methods to allow controlling the proxy used to access vault. [(PR #191)https://github.com/BetterCloud/vault-java-driver/pull/191]
   * Changes the retry behavior, to no longer attempt retries on 4xx response codes (for which retries generally won't succeed anyway).  This 
     is the only (mildly) breaking change in this release, necessitating a major version bump. [(PR #176)](https://github.com/BetterCloud/vault-java-driver/pull/176)
   * Implements support for the Database secret engine. [(PR #175)](https://github.com/BetterCloud/vault-java-driver/pull/175)
