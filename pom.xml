@@ -8,7 +8,7 @@
     <version>9</version>
   </parent>
 
-  <groupId>io.github.stephenc.vault-java-driver</groupId>
+  <groupId>io.github.stephenc.tmp-fork</groupId>
   <artifactId>vault-java-driver</artifactId>
   <version>4.2.0-SNAPSHOT</version>
 
