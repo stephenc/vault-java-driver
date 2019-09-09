@@ -46,14 +46,14 @@ The driver is available from Maven Central, for all modern Java build systems.
 Gradle:
 ```
 dependencies {
-    implementation 'io.github.stephenc.vault-java-driver:vault-java-driver:4.2.0'
+    implementation 'io.github.stephenc.tmp-fork:vault-java-driver:4.2.0'
 }
 ```
 
 Maven:
 ```
 <dependency>
-    <groupId>io.github.stephenc.vault-java-driver</groupId>
+    <groupId>io.github.stephenc.tmp-fork</groupId>
     <artifactId>vault-java-driver</artifactId>
     <version>4.2.0</version>
 </dependency>
